@@ -1,0 +1,21 @@
+name: catwalk_server
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.5.0-edge.fb057ea4e07de2af624688455925c0ca07afe04f
+
+# Add regular dependencies here.
+dependencies:
+  catwalk:
+    path: ../catwalk
+  shelf_router: ^1.1.4
+  shelf: ^1.4.1
+  lyell: ^1.1.0
+  conduit_open_api: ^4.4.0
+  routingkit: ^0.2.1
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.24.0

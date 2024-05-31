@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/packages/catwalk/catwalk.iml" filepath="$PROJECT_DIR$/packages/catwalk/catwalk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catwalk_project.iml" filepath="$PROJECT_DIR$/catwalk_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/catwalk_server/catwalk_server.iml" filepath="$PROJECT_DIR$/packages/catwalk_server/catwalk_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiproject_example/client/client.iml" filepath="$PROJECT_DIR$/multiproject_example/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiproject_example/server/server.iml" filepath="$PROJECT_DIR$/multiproject_example/server/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiproject_example/shared/shared.iml" filepath="$PROJECT_DIR$/multiproject_example/shared/shared.iml" />
+    </modules>
+  </component>
+</project>
