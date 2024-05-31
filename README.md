@@ -46,4 +46,7 @@ void main(List<String> arguments) async {
   var client = TestEndpointClient(protocol);
   print(await client.getName("Moin!"));
 }
+
+@ClientMacro()
+class TestEndpointClient implements TestEndpoint {}
 ```
