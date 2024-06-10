@@ -99,7 +99,6 @@ macro class ClientMacro implements ClassDeclarationsMacro, ClassDefinitionMacro 
     var type = await builder.typeDeclarationOf(endpoint.identifier);
     var declaredMethods = await builder.methodsOf(clazz);
 
-
     var indexCounter = 0;
     for (var method in filterCatwalkMethodCandidates(await builder.methodsOf(type))) {
       var declaredMethod = declaredMethods.firstWhere((x) => x.identifier.name == method.identifier.name);

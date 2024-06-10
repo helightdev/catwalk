@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:catwalk/src/macro_utils.dart';
 import 'package:macros/macros.dart';
 import 'package:lyell/lyell.dart';
+import 'package:lyell/src/lyell_base.dart';
 import 'package:collection/collection.dart';
 
 macro class EndpointMacro implements ClassDeclarationsMacro, ClassDefinitionMacro {
@@ -81,8 +82,7 @@ macro class EndpointMacro implements ClassDeclarationsMacro, ClassDefinitionMacr
 
     var routesBuilder = await builder.buildMethod(routesGetter.identifier);
     routesBuilder.augment(FunctionBodyCode.fromParts([
-      "=>",
-      "[",
+      "=> [",
       ...routes.commaDelimited,
       "];"
     ]));

@@ -4,6 +4,7 @@
 library;
 
 import 'package:catwalk/catwalk.dart';
+import 'package:lyell/lyell.dart';
 
 final protocol = JsonRpcProtocol();
 
@@ -11,5 +12,11 @@ final protocol = JsonRpcProtocol();
 abstract interface class TestEndpoint implements Endpoint {
   Future<String> getName(String userId);
 
+  @TestAnnotation("Test")
   Future<String?> nullableString();
+}
+
+class TestAnnotation implements RetainedAnnotation {
+  final String value;
+  const TestAnnotation(this.value);
 }
