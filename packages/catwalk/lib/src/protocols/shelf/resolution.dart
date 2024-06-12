@@ -51,6 +51,11 @@ class ResolvedAnnotations {
 
     arguments.removeWhere((e) => queryArguments.containsKey(e));
     arguments.removeWhere((e) => headerArguments.containsKey(e));
+    arguments.removeWhere((e) => e == bodyArgument);
+
+    if (bodyArgument == null && arguments.isNotEmpty) {
+      bodyArgument = arguments.removeAt(0);
+    }
 
     final requestMapping = RequestMapping.from(definition);
 

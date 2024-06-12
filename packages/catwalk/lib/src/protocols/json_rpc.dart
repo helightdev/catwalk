@@ -1,11 +1,12 @@
 import 'dart:convert';
 
 import 'package:catwalk/catwalk.dart';
-import 'package:catwalk/src/client_runner.dart';
-import 'package:catwalk/src/endpoint_macro.dart';
 import 'package:catwalk/src/protocol.dart';
+import 'package:catwalk/src/protocols/http_client.dart';
 import 'package:collection/collection.dart';
 import 'package:http/http.dart' as http;
+
+import 'jsonrpc/client_assembler.dart';
 
 class JsonRpcProtocol extends CatwalkProtocol {
 
@@ -29,11 +30,12 @@ class JsonRpcProtocol extends CatwalkProtocol {
 
 class JsonRpcClient {
 
-  final JsonRpcClientConfig config;
+  final HttpClientConfig config;
   final http.Client _httpClient = http.Client();
+
   JsonRpcClient._(this.config);
 
-  factory JsonRpcClient(JsonRpcClientConfig config) {
+  factory JsonRpcClient(HttpClientConfig config) {
     return JsonRpcClient._(config);
   }
 
@@ -100,14 +102,6 @@ class JsonRpcError {
   }
 }
 
-class JsonRpcClientConfig {
-  final String baseUrl;
-
-  const JsonRpcClientConfig({
-    this.baseUrl = "http://localhost:8080",
-  });
-}
-
 typedef ArgumentAssembler = MapEntry<String, Object?> Function(dynamic argument);
 typedef ResultAssembler = dynamic Function(Object? response);
 typedef AssemblerEntry = ({List<ArgumentAssembler> arguments, String method, ResultAssembler result});
@@ -124,19 +118,7 @@ class JsonRpcClientRunner extends ClientRunner {
     var currentValue = assemblers[index];
     if (currentValue == null) {
       var route = routes[index];
-      var argumentAssemblers = route.arguments.mapIndexed((i, e) {
-        var serializer = protocol.resolveSerializer(e.type);
-        if (serializer == null) {
-          throw StateError("No serializer found for ${e.type}");
-        }
-        return (obj) => MapEntry(e.name, serializer.serializeStructured(obj));
-      }).toList();
-      var resultSerializer = protocol.resolveSerializer(route.response);
-      if (resultSerializer == null) {
-        throw StateError("No serializer found for ${route.response}");
-      }
-      result(obj) => resultSerializer.deserializeStructured(obj);
-      currentValue = (arguments: argumentAssemblers, method: route.name, result: result);
+      currentValue = createAssemblerEntry(protocol, route);
       assemblers[index] = currentValue;
     }
 

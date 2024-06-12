@@ -34,6 +34,7 @@ abstract class CatwalkProtocol {
 
 abstract class CatwalkSerializerModule {
   CatwalkSerializerNode? resolveSerializer(QualifiedTypeTree type);
+  Map<String,APISchemaObject> getSchemaObjects() => {};
 }
 
 abstract class CatwalkSerializerNode {

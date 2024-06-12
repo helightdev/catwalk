@@ -8,7 +8,7 @@ class RequestMapping implements RetainedAnnotation {
 
   static RequestMapping from(RouteDefinition route) {
     var method = "POST";
-    var name = route.name;
+    var name = "/${route.name}";
     for (var annotation in route.annotations.whereType<RequestMapping>()) {
       method = annotation.method;
       name = annotation.path;
@@ -61,6 +61,7 @@ class CATCHALL extends RequestMapping {
 const body = Body();
 const path = Path();
 const query = Query();
+const header = Header();
 
 class Body extends RetainedAnnotation {
   const Body();
@@ -83,6 +84,7 @@ class Path extends RetainedAnnotation {
     for (var arg in remainingArguments) {
       var path = arg.annotations.whereType<Path>().firstOrNull;
       if (path == null) continue;
+      if (path.name == null) path = Path(arg.name); // Should never ne reached
       pathArguments[arg] = path;
     }
 
@@ -97,7 +99,7 @@ class Query extends RetainedAnnotation {
   static Query? of(MethodArgument argument) {
     var query = argument.annotations.whereType<Query>().firstOrNull;
     if (query == null) return null;
-    query = Query(argument.name);
+    if (query.name == null) query = Query(argument.name);
     return query;
   }
 }
@@ -109,7 +111,7 @@ class Header extends RetainedAnnotation {
   static Header? of(MethodArgument argument) {
     var header = argument.annotations.whereType<Header>().firstOrNull;
     if (header == null) return null;
-    header = Header(argument.name);
+    if (header.name == null) header = Header(argument.name);
     return header;
   }
 }

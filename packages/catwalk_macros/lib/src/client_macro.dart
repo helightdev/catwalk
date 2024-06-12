@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:catwalk/src/endpoint_macro.dart';
 import 'package:catwalk/src/client_runner.dart';
 import 'package:catwalk/src/protocol.dart';
-import 'package:catwalk/src/macro_utils.dart';
 import 'package:macros/macros.dart';
+
+import 'macro_utils.dart';
 
 macro class ClientMacro implements ClassDeclarationsMacro, ClassDefinitionMacro {
   const ClientMacro();
@@ -33,27 +33,22 @@ macro class ClientMacro implements ClassDeclarationsMacro, ClassDefinitionMacro 
       " protocol;"
     ]));
 
-    // Define constructor
-    builder.declareInType(DeclarationCode.fromParts([
-      "${clazz.identifier.name}(this.protocol);"
-    ]));
-
     builder.declareInType(DeclarationCode.fromParts([
       "final ",
       NamedTypeAnnotationCode(name: dartList, typeArguments: [NamedTypeAnnotationCode(name: catwalkRouteDefinition, typeArguments: [NamedTypeAnnotationCode(name: endpoint.identifier)])]),
-      " routes = ",
-      NamedTypeAnnotationCode(name: endpoint.identifier),
-      ".routes;"
+      " routes;"
+    ]));
+
+    // Define constructor
+    builder.declareInType(DeclarationCode.fromParts([
+      "${clazz.identifier.name}(this.protocol, this.routes);"
     ]));
 
     builder.declareInType(DeclarationCode.fromParts([
       "late final ",
       NamedTypeAnnotationCode(name: clientRunner),
       " runner = ",
-      "protocol.createClientRunner(",
-      NamedTypeAnnotationCode(name: endpoint.identifier),
-      ".routes",
-      ");"
+      "protocol.createClientRunner(routes);"
     ]));
 
     var type = await builder.typeDeclarationOf(endpoint.identifier);

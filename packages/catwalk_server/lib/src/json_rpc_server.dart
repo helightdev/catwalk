@@ -9,14 +9,13 @@ typedef ArgumentAssembler = dynamic Function(Map<String,Object?> argument);
 typedef ResultAssembler = Object? Function(dynamic response);
 typedef AssemblerEntry = ({List<ArgumentAssembler> arguments, String method, ResultAssembler result});
 
-class JsonRpcServer<T extends Endpoint>  {
+class JsonRpcServer<T extends Endpoint> {
 
   final CatwalkProtocol protocol;
   final T endpoint;
   final List<RouteDefinition<T>> routes;
 
   JsonRpcServer(this.protocol, this.endpoint, this.routes);
-
 
   late final List<AssemblerEntry?> assemblers = List.filled(routes.length, null);
 

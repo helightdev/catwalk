@@ -3,6 +3,9 @@ import 'dart:async';
 import 'package:lyell/lyell.dart';
 abstract interface class Endpoint {}
 
+class EndpointPolyfill {
+  const EndpointPolyfill();
+}
 
 typedef MethodProxy<T> = FutureOr<dynamic> Function(T obj, List<dynamic> args);
 
@@ -20,6 +23,8 @@ class RouteDefinition<T> {
   String toString() {
     return 'RouteDefinition{annotations: $annotations, response: $response, arguments: $arguments, proxy: $proxy, name: $name}';
   }
+
+  dynamic invokeProxy(dynamic obj, List args) => proxy(obj as T, args);
 }
 
 class MethodArgument {

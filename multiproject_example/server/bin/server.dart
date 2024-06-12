@@ -5,7 +5,9 @@ import 'package:server/server.dart';
 import 'package:shared/shared.dart';
 
 void main(List<String> arguments) async {
-  print(TestEndpoint.routes);
-  var server = JsonRpcServer(protocol, TestController(), TestEndpoint.routes);
+  print(TestEndpoint_routes);
+  var server = RestServer();
+  server.registerAll(TestController(), protocol, TestEndpoint_routes);
+  server.registerSwagger(protocol, TestEndpoint_routes);
   await server.serve();
 }

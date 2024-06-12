@@ -1,10 +1,11 @@
 import 'dart:async';
 
-import 'package:catwalk/src/macro_utils.dart';
 import 'package:macros/macros.dart';
 import 'package:lyell/lyell.dart';
 import 'package:lyell/src/lyell_base.dart';
 import 'package:collection/collection.dart';
+
+import 'macro_utils.dart';
 
 macro class EndpointMacro implements ClassDeclarationsMacro, ClassDefinitionMacro {
 

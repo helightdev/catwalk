@@ -1,0 +1,31 @@
+targets:
+  $default:
+    builders: {}
+
+builders:
+  definitions_descriptor:
+    import: "package:catwalk_polyfills/integrations.dart"
+    builder_factories: [ "definitionsDescriptor" ]
+    build_extensions: { ".dart": [ ".endpoint.catwalk" ] }
+    runs_before: [ "catwalk_polyfills:definitions_subject" ]
+    auto_apply: dependents
+    build_to: cache
+    applies_builders:
+      - catwalk_polyfills|client_builder
+  definitions_subject:
+    import: "package:catwalk_polyfills/integrations.dart"
+    builder_factories: [ "definitionsSubject" ]
+    build_extensions: { ".dart": [ ".endpoint.g.dart" ] }
+    auto_apply: dependents
+    build_to: source
+    applies_builders:
+      - catwalk_polyfills|client_builder
+  catwalk_reactor:
+    import: "package:catwalk_polyfills/integrations.dart"
+    builder_factories: [ "reactorBuilder" ]
+    build_extensions: { "$lib$": [ "catwalk.g.dart" ] }
+    required_inputs: [ ".endpoint.catwalk",".endpoint.g.dart" ]
+    auto_apply: dependents
+    build_to: source
+    applies_builders:
+      - catwalk_polyfills|client_builder

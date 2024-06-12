@@ -3,17 +3,26 @@
 /// More dartdocs go here.
 library;
 
+import 'dart:async';
+
 import 'package:catwalk/catwalk.dart';
 import 'package:lyell/lyell.dart';
 
-final protocol = JsonRpcProtocol();
+export 'catwalk.g.dart';
 
-@EndpointMacro()
+final protocol = ShelfRestProtocol();
+
+@EndpointPolyfill()
 abstract interface class TestEndpoint implements Endpoint {
-  Future<String> getName(String userId);
+
+  @GET("/name/:userId")
+  FutureOr<String> getName(String userId);
+
+  @POST("/stuff")
+  FutureOr<String> stuff(@body String body, @header String testHeader, @query String queryParam);
 
   @TestAnnotation("Test")
-  Future<String?> nullableString();
+  FutureOr<String?> nullableString();
 }
 
 class TestAnnotation implements RetainedAnnotation {
