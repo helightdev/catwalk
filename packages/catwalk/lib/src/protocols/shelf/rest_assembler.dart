@@ -1,8 +1,6 @@
 import 'dart:convert';
 
 import 'package:catwalk/catwalk.dart';
-import 'package:catwalk/src/protocols/shelf.dart';
-import 'package:collection/collection.dart';
 import 'package:http/http.dart';
 
 class RestClientEncoder {
@@ -11,8 +9,8 @@ class RestClientEncoder {
   final RouteDefinition definition;
 
   RestClientEncoder(this.protocol, this.definition);
-  late ResolvedAnnotations resolved = ResolvedAnnotations.resolve(definition);
-  late List<CatwalkSerializerNode> argSerializers = definition.arguments.map((e) {
+  late final ResolvedAnnotations resolved = ResolvedAnnotations.resolve(definition);
+  late final List<CatwalkSerializerNode> argSerializers = definition.arguments.map((e) {
     var serializer = protocol.resolveSerializer(e.type);
     if (serializer == null) {
       throw StateError("No serializer found for ${e.type}");
@@ -20,7 +18,7 @@ class RestClientEncoder {
     return serializer;
   }).toList();
 
-  late CatwalkSerializerNode responseSerializer = () {
+  late final CatwalkSerializerNode responseSerializer = () {
     var serializer = protocol.resolveSerializer(definition.response);
     if (serializer == null) {
       throw StateError("No serializer found for ${definition.response}");
@@ -28,23 +26,23 @@ class RestClientEncoder {
     return serializer;
   }();
   
-  late List<String> pathVariables = SegmentUtils.getVariableSegments(resolved.requestMapping.path);
-  late List<int> pathArgumentIndexes = pathVariables.map((e) => definition.arguments.indexWhere((element) {
+  late final List<String> pathVariables = SegmentUtils.getVariableSegments(resolved.requestMapping.path);
+  late final List<int> pathArgumentIndexes = pathVariables.map((e) => definition.arguments.indexWhere((element) {
     var path = resolved.pathArguments[element];
     return path != null && path.name == e;
   })).toList();
   
-  late List<(String, int, bool nullable)> queryArguments = resolved.queryArguments.entries.map((e) {
+  late final List<(String, int, bool nullable)> queryArguments = resolved.queryArguments.entries.map((e) {
     var index = definition.arguments.indexOf(e.key);
     return (e.value.name!, index, e.key.nullable);
   }).toList();
   
-  late List<(String, int, bool nullable)> headerArguments = resolved.headerArguments.entries.map((e) {
+  late final List<(String, int, bool nullable)> headerArguments = resolved.headerArguments.entries.map((e) {
     var index = definition.arguments.indexOf(e.key);
     return (e.value.name!, index, e.key.nullable);
   }).toList();
   
-  late int? bodyIndex = resolved.bodyArgument != null ? definition.arguments.indexOf(resolved.bodyArgument!) : null;
+  late final int? bodyIndex = resolved.bodyArgument != null ? definition.arguments.indexOf(resolved.bodyArgument!) : null;
 
   Request build(String baseUrl, List args) {
     var p = resolved.requestMapping.path;
@@ -84,8 +82,13 @@ class RestClientEncoder {
 
   dynamic decode(Response response) {
     var body = response.body;
+    if (response.statusCode == 204) {
+      if (!definition.nullable) {
+        throw StateError("Response was null but definition is not nullable");
+      }
+      return null;
+    }
     var jsonBody = jsonDecode(body);
-    if (jsonBody == null && definition.nullable) return null;
     return responseSerializer.deserializeStructured(jsonBody);
   }
 }

@@ -1,7 +1,4 @@
 import 'package:catwalk/catwalk.dart';
-
-import 'annotations.dart';
-
 class ResolvedAnnotations {
 
   final Map<MethodArgument, Path> pathArguments;

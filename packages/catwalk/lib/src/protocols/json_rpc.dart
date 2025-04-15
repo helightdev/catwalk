@@ -13,6 +13,8 @@ class JsonRpcProtocol extends CatwalkProtocol {
   @override
   String get protocolName => "jsonrpc";
 
+  String? path;
+
   JsonRpcClient? _client;
 
   set client(JsonRpcClient client) {
@@ -25,6 +27,16 @@ class JsonRpcProtocol extends CatwalkProtocol {
       throw StateError("Client must be set before creating a runner");
     }
     return JsonRpcClientRunner(this, routes);
+  }
+
+  JsonRpcProtocol clone() {
+    var clone = JsonRpcProtocol();
+    for (var module in serializerModules) {
+      clone.serializerModules.add(module);
+    }
+    clone.path = path;
+    if (_client != null) clone.client = _client!;
+    return clone;
   }
 }
 
@@ -52,8 +64,8 @@ class JsonRpcClient {
     }
   }
 
-  Future<Object?> makeRpcCall(String method, Map<String,Object?> structuredData) async {
-    var url = Uri.parse(config.baseUrl).resolve("/rpc");
+  Future<Object?> makeRpcCall(String path, String method, Map<String,Object?> structuredData) async {
+    var url = Uri.parse("${config.baseUrl}$path/rpc");
     var originalId = nextId;
     var body = <String,Object?>{
       "jsonrpc": "2.0",
@@ -65,12 +77,11 @@ class JsonRpcClient {
     var result = await _httpClient.post(url, body: jsonBody);
     var responseBody = jsonDecode(result.body);
     if (responseBody["jsonrpc"] != "2.0") throw StateError("Response is not a valid jsonrpc response");
-    if (responseBody["id"] != originalId) throw StateError("Response id does not match request id");
-    if (responseBody["result"] != null) {
-      return responseBody["result"];
-    } else {
+    if (responseBody["error"] != null) {
       throw JsonRpcError.fromMap(responseBody["error"]);
     }
+    if (responseBody["id"] != originalId) throw StateError("Response id does not match request id");
+    return responseBody["result"];
   }
 }
 
@@ -110,7 +121,14 @@ class JsonRpcClientRunner extends ClientRunner {
   final JsonRpcProtocol protocol;
   final List<RouteDefinition> routes;
 
-  JsonRpcClientRunner(this.protocol, this.routes);
+  String path = "";
+
+  JsonRpcClientRunner(this.protocol, this.routes) {
+    var segments = protocol.path?.segments ?? [];
+    if (segments.isNotEmpty) {
+      path = "/${segments.join("/")}";
+    }
+  }
 
   late final List<AssemblerEntry?> assemblers = List.filled(routes.length, null);
 
@@ -118,7 +136,11 @@ class JsonRpcClientRunner extends ClientRunner {
     var currentValue = assemblers[index];
     if (currentValue == null) {
       var route = routes[index];
-      currentValue = createAssemblerEntry(protocol, route);
+      try {
+        currentValue = createAssemblerEntry(protocol, route);
+      } catch (e) {
+        throw StateError("Error creating assembler for route ${route.name}: $e");
+      }
       assemblers[index] = currentValue;
     }
 
@@ -129,7 +151,11 @@ class JsonRpcClientRunner extends ClientRunner {
   Future run(int index, List args) async {
     var entry = getOrCreate(index);
     var structuredData = Map.fromEntries(args.mapIndexed((i,e) => entry.arguments[i](e)));
-    var response = await protocol._client!.makeRpcCall(entry.method, structuredData);
+
+    var response = await protocol._client!.makeRpcCall(path, entry.method, structuredData);
+    if (response == null) {
+      return null;
+    }
     var result = entry.result(response);
     return result;
   }

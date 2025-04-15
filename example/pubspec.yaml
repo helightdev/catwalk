@@ -13,14 +13,13 @@ dependencies:
     path: ../packages/catwalk
   catwalk_server:
     path: ../packages/catwalk_server
-  catwalk_macros:
-    path: ../packages/catwalk_macros
-
 
 dev_dependencies:
   lints: ^4.0.0
   test: ^1.24.0
-
+  build_runner: ^2.4.13
+  catwalk_generator:
+    path: ../packages/catwalk_generator
 
 dependency_overrides:
   catwalk:

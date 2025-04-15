@@ -4,9 +4,6 @@ import 'package:catwalk/catwalk.dart';
 import 'package:conduit_open_api/v3.dart';
 import 'package:lyell/lyell.dart';
 
-import 'client_runner.dart';
-import 'serializers/default.dart';
-
 abstract class CatwalkProtocol {
   CatwalkProtocol();
   String get protocolName;

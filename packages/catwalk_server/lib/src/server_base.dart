@@ -1,29 +1,29 @@
 import 'dart:convert';
 
 import 'package:catwalk/catwalk.dart';
-import 'package:catwalk_server/src/rest_assembler.dart';
+import 'package:catwalk_server/catwalk_server.dart';
 import 'package:shelf/shelf.dart';
-import 'package:shelf_openrouter/shelf_openrouter.dart';
+
 import 'package:shelf/shelf_io.dart' as shelf_io;
+import 'package:shelf_openrouter/shelf_openrouter.dart';
 
-abstract class RestController {
-  late RequestContext context;
-}
-
-class RequestContext {
-
-}
-
-class RestServer {
+class CatwalkServer {
   final OpenRouter<RouterEntryBase> router = OpenRouter();
 
   void register(RestController controller, CatwalkProtocol protocol, RouteDefinition definition) {
-    var entry = RouteEntry(controller, protocol, definition);
+    var entry = RestRouterEntry(controller, protocol, definition);
+    try {
+      entry.createEncoder();
+    } catch (e) {
+      print("Error creating encoder for $definition: $e");
+      rethrow;
+    }
+
     var mapping = entry.encoder.resolved.requestMapping;
     router.addRoute(mapping.path.segments, mapping.method, entry);
 
     if (mapping.method == "GET") {
-      router.addRoute(mapping.path.segments, "HEAD", RouteEntry(controller, protocol, definition, removeBody: true));
+      router.addRoute(mapping.path.segments, "HEAD", RestRouterEntry(controller, protocol, definition, removeBody: true));
     }
   }
 
@@ -31,6 +31,12 @@ class RestServer {
     for (var definition in definitions) {
       register(controller, protocol, definition);
     }
+  }
+
+  void registerRpc<T extends Endpoint>(T endpoint, JsonRpcProtocol protocol, List<RouteDefinition<T>> definitions, {String? path}) {
+    var segments =  protocol.path?.segments ?? [];
+    var entry = RpcRouterEntry<T>(protocol, endpoint, definitions);
+    router.addRoute([...segments, "rpc"], "POST", entry);
   }
 
   void registerSwagger(CatwalkProtocol protocol, List<RouteDefinition> definitions, {
@@ -81,7 +87,6 @@ class RestServer {
     var method = request.method;
     var pathVariableBuffer = <String>[];
     var result = router.lookup(request.url.pathSegments, method, pathVariableBuffer);
-    print(pathVariableBuffer);
     if (result == null) {
       return Response.notFound("");
     }
@@ -107,24 +112,5 @@ class ManualRouteEntry extends RouterEntryBase {
   @override
   Future<Response> handle(Request request, List<String> pathArgs) {
     return handler(request, pathArgs);
-  }
-}
-
-class RouteEntry extends RouterEntryBase {
-  final CatwalkProtocol protocol;
-  final RouteDefinition definition;
-  final RestController controller;
-
-  final bool removeBody;
-
-  RouteEntry(this.controller, this.protocol, this.definition, {this.removeBody = false});
-
-  late RestServerEncoder encoder = RestServerEncoder(protocol, definition);
-
-  Future<Response> handle(Request request, List<String> pathArgs) async {
-    var args = await encoder.parse(request, pathArgs);
-    var result = await definition.invokeProxy(controller, args);
-    if (removeBody) return Response.ok("");
-    return encoder.build(result);
   }
 }

@@ -13,6 +13,8 @@
 
 include: package:lints/recommended.yaml
 
+analyzer: {}
+
 # Uncomment the following section to specify additional rules.
 
 # linter:

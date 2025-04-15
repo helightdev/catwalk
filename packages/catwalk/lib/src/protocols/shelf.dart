@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:catwalk/catwalk.dart';
 import 'package:catwalk/src/protocols/http_client.dart';
 import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 
 import 'shelf/rest_assembler.dart';
 
@@ -26,7 +27,23 @@ class ShelfRestProtocol extends CatwalkProtocol {
     if (_client == null) {
       throw StateError("Client must be set before creating a runner");
     }
-    return ShelfRestClientRunner(_client!, this, routes);
+    var runner = ShelfRestClientRunner(_client!, this, routes);
+    try {
+      runner.createEncoders();
+    } catch (e) {
+      print("Error creating encoders: $e");
+      rethrow;
+    }
+    return runner;
+  }
+
+  ShelfRestProtocol clone() {
+    var clone = ShelfRestProtocol();
+    for (var module in serializerModules) {
+      clone.serializerModules.add(module);
+    }
+    if (_client != null) clone.client = _client!;
+    return clone;
   }
 }
 
@@ -51,17 +68,24 @@ class ShelfRestClientRunner extends ClientRunner {
 
   ShelfRestClientRunner(this.client, this.protocol, this.routes);
 
-  late final List<RestClientEncoder> encoders = routes.map((e) => RestClientEncoder(protocol, e)).toList();
+  late final List<RestClientEncoder> encoders;
+
+  void createEncoders() {
+    encoders = routes.map((e) => RestClientEncoder(protocol, e)).toList();
+  }
+
+  @override
   Future<dynamic> run(int index, List args) async {
     final encoder = encoders[index];
-    final request = encoder.build(client.config.baseUrl, args);
+    var request = encoder.build(client.config.baseUrl, args);
+    request = await client.config.prepare(request);
+
     final response = await client._httpClient.send(request);
-    if (response.statusCode != 200) {
+    if (response.statusCode >= 300) {
       throw StateError("Request failed with status code ${response.statusCode}");
     }
-    final body = await response.stream.bytesToString();
-    final jsonBody = jsonDecode(body);
-    final result = encoder.responseSerializer.deserializeStructured(jsonBody);
-    return result;
+
+    final res = await Response.fromStream(response);
+    return encoder.decode(res);
   }
 }

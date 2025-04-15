@@ -3,8 +3,8 @@
 /// More dartdocs go here.
 library;
 
-export 'src/catwalk_server_base.dart';
-
+export 'src/server_base.dart';
+export 'src/catwalk_rest.dart';
 export 'src/json_rpc_server.dart';
 
 // TODO: Export any libraries intended for clients of this package.

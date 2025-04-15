@@ -1,6 +1,7 @@
 import 'package:catwalk/catwalk.dart';
 import 'package:catwalk/src/protocols/shelf/resolution.dart';
 import 'package:conduit_open_api/v3.dart';
+import 'package:lyell/lyell.dart';
 
 class ShelfOpenapi {
   static APIDocument generate(CatwalkProtocol protocol, Type endpoint, List<RouteDefinition> definitions) {
@@ -25,18 +26,29 @@ class ShelfOpenapi {
       for (var child in childDefs) {
         var index = resolvedDefs.indexOf(child);
         var definition = definitions[index];
-        var response = protocol.resolveSerializer(definition.response)!;
 
-        var responses = {
-          "200": APIResponse(
-              "Default response",
-              content: {
-                "application/json": APIMediaType(
-                    schema: response.getStructuredSchema()
-                )
-              }
-          )
-        };
+        var isVoid = definition.response.typeArgument == const TypeToken<void>().typeArgument;
+        var isDynamic = definition.response.typeArgument == const TypeToken<dynamic>().typeArgument;
+        var response = protocol.resolveSerializer(definition.response);
+
+        Map<String,APIResponse> responses;
+        if (isVoid || isDynamic) {
+          responses = {
+            "204": APIResponse("No response"),
+          };
+        } else {
+          responses = {
+            "200": APIResponse(
+                "Default response",
+                content: {
+                  "application/json": APIMediaType(
+                      schema: response!.getStructuredSchema()
+                  )
+                }
+            ),
+            if (definition.nullable) "204": APIResponse("No content"),
+          };
+        }
 
         var operation = APIOperation(
             definition.name, responses

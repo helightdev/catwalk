@@ -10,8 +10,8 @@ class RestServerEncoder {
 
   RestServerEncoder(this.protocol, this.definition);
 
-  late ResolvedAnnotations resolved = ResolvedAnnotations.resolve(definition);
-  late List<CatwalkSerializerNode> argSerializers = definition.arguments.map((
+  late final ResolvedAnnotations resolved = ResolvedAnnotations.resolve(definition);
+  late final List<CatwalkSerializerNode> argSerializers = definition.arguments.map((
       e) {
     var serializer = protocol.resolveSerializer(e.type);
     if (serializer == null) {
@@ -20,7 +20,7 @@ class RestServerEncoder {
     return serializer;
   }).toList();
 
-  late CatwalkSerializerNode responseSerializer = () {
+  late final CatwalkSerializerNode responseSerializer = () {
     var serializer = protocol.resolveSerializer(definition.response);
     if (serializer == null) {
       throw StateError("No serializer found for ${definition.response}");
@@ -28,25 +28,25 @@ class RestServerEncoder {
     return serializer;
   }();
 
-  late List<String> pathVariables = SegmentUtils.getVariableSegments(resolved.requestMapping.path);
-  late List<int> pathArgumentIndexes = pathVariables.map((e) => definition.arguments.indexWhere((element) {
+  late final List<String> pathVariables = SegmentUtils.getVariableSegments(resolved.requestMapping.path);
+  late final List<int> pathArgumentIndexes = pathVariables.map((e) => definition.arguments.indexWhere((element) {
     var path = resolved.pathArguments[element];
     return path != null && path.name == e;
   })).toList();
 
-  late List<(String, int, bool nullable)> queryArguments = resolved.queryArguments.entries.map((e) {
+  late final List<(String, int, bool nullable)> queryArguments = resolved.queryArguments.entries.map((e) {
     var index = definition.arguments.indexOf(e.key);
     return (e.value.name!, index, e.key.nullable);
   }).toList();
 
-  late List<(String, int, bool nullable)> headerArguments = resolved.headerArguments.entries.map((e) {
+  late final List<(String, int, bool nullable)> headerArguments = resolved.headerArguments.entries.map((e) {
     var index = definition.arguments.indexOf(e.key);
     return (e.value.name!, index, e.key.nullable);
   }).toList();
 
-  late int? bodyIndex = resolved.bodyArgument != null ? definition.arguments.indexOf(resolved.bodyArgument!) : null;
+  late final int? bodyIndex = resolved.bodyArgument != null ? definition.arguments.indexOf(resolved.bodyArgument!) : null;
 
-  late bool bodyNullable = resolved.bodyArgument?.nullable ?? false;
+  late final bool bodyNullable = resolved.bodyArgument?.nullable ?? false;
 
   Future<List> parse(Request request, List<String> pathArgs) async {
     final args = List<dynamic>.filled(argSerializers.length, null);
@@ -80,6 +80,9 @@ class RestServerEncoder {
   }
 
   Response build(dynamic result) {
+    if (result == null) {
+      return new Response(204);
+    }
     var value = responseSerializer.serializeStructured(result);
     return Response.ok(jsonEncode(value), headers: {'Content-Type': 'application/json'});
   }

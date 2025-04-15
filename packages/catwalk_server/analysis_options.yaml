@@ -13,9 +13,7 @@
 
 include: package:lints/recommended.yaml
 
-analyzer:
-  enable-experiment:
-    - macros
+analyzer: {}
 
 # Uncomment the following section to specify additional rules.
 

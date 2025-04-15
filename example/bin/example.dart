@@ -1,12 +1,15 @@
 import 'package:catwalk/catwalk.dart';
 import 'package:catwalk_server/catwalk_server.dart';
+import 'package:example/catwalk.g.dart';
 import 'package:example/example.dart';
 
 void main(List<String> arguments) async {
-  var server = JsonRpcServer(protocol, TestController(), TestEndpoint.routes);
+  var server = CatwalkServer();
+  server.registerRpc<TestEndpoint>(TestController(), protocol, TestEndpoint_routes);
+
   await server.serve();
 
-  protocol.client = JsonRpcClient(JsonRpcClientConfig(baseUrl: "http://localhost:8080"));
+  protocol.client = JsonRpcClient(HttpClientConfig(baseUrl: "http://localhost:8080"));
   var client = TestEndpointClient(protocol);
   print(await client.getName("Moin!"));
 }

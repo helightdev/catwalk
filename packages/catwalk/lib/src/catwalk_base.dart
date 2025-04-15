@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:lyell/lyell.dart';
 abstract interface class Endpoint {}
 
-class EndpointPolyfill {
-  const EndpointPolyfill();
+class CatwalkEndpoint {
+  const CatwalkEndpoint();
 }
 
 typedef MethodProxy<T> = FutureOr<dynamic> Function(T obj, List<dynamic> args);
@@ -50,6 +50,9 @@ extension StringExtension on String {
     }
     if (str.endsWith('/')) {
       str = str.substring(0, str.length - 1);
+    }
+    if (str.isEmpty) {
+      return [];
     }
     return str.split('/');
   }

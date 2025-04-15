@@ -6,6 +6,9 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-70.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-68.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/_fe_analyzer_shared-80.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-80.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -13,6 +16,7 @@
           <value>
             <list>
               <option value="/usr/lib/dart/pkg/_macros/lib" />
+              <option value="$USER_HOME$/snap/flutter/common/flutter/bin/cache/dart-sdk/pkg/_macros/lib" />
             </list>
           </value>
         </entry>
@@ -20,6 +24,9 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-6.5.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-6.5.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/analyzer-7.3.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-7.3.0/lib" />
             </list>
           </value>
         </entry>
@@ -27,6 +34,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/args-2.5.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/args-2.5.0/lib" />
             </list>
           </value>
         </entry>
@@ -34,6 +42,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/async-2.11.0/lib" />
             </list>
           </value>
         </entry>
@@ -41,6 +50,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -48,6 +58,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build-2.4.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build-2.4.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build-2.4.2/lib" />
             </list>
           </value>
         </entry>
@@ -55,6 +67,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_config-1.1.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_config-1.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -62,6 +75,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_daemon-4.0.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_daemon-4.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -69,6 +83,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_resolvers-2.4.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_resolvers-2.4.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_resolvers-2.4.4/lib" />
             </list>
           </value>
         </entry>
@@ -76,6 +92,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner-2.4.11/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_runner-2.4.14/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner-2.4.14/lib" />
             </list>
           </value>
         </entry>
@@ -83,6 +101,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-7.3.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_runner_core-8.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-8.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -90,6 +110,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/built_collection-5.1.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/built_collection-5.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -97,6 +118,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/built_value-8.9.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/built_value-8.9.2/lib" />
             </list>
           </value>
         </entry>
@@ -104,6 +126,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -111,6 +134,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/code_builder-4.10.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/code_builder-4.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -118,6 +142,9 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.18.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/collection-1.19.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.19.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.19.0/lib" />
             </list>
           </value>
         </entry>
@@ -125,6 +152,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/conduit_codable-4.4.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/conduit_codable-4.4.0/lib" />
             </list>
           </value>
         </entry>
@@ -132,6 +160,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/conduit_open_api-4.4.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/conduit_open_api-4.4.0/lib" />
             </list>
           </value>
         </entry>
@@ -139,6 +168,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/convert-3.1.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/convert-3.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -146,6 +176,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/coverage-1.8.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/coverage-1.8.0/lib" />
             </list>
           </value>
         </entry>
@@ -153,6 +184,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.3/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/crypto-3.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -160,6 +192,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.6/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/dart_style-3.0.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-3.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -167,6 +201,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/duffer-2.3.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/duffer-2.3.2/lib" />
             </list>
           </value>
         </entry>
@@ -174,6 +209,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/file-7.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/file-7.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -181,6 +217,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fixnum-1.1.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/fixnum-1.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -188,6 +225,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/frontend_server_client-4.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/frontend_server_client-4.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -195,6 +233,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/glob-2.1.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/glob-2.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -202,6 +241,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/graphs-2.3.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/graphs-2.3.2/lib" />
             </list>
           </value>
         </entry>
@@ -209,6 +249,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http-1.2.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http-1.2.1/lib" />
             </list>
           </value>
         </entry>
@@ -216,6 +257,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http_methods-1.1.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http_methods-1.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -223,6 +265,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
             </list>
           </value>
         </entry>
@@ -230,6 +273,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -237,6 +282,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/io-1.0.4/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/io-1.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -244,6 +290,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.7.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/js-0.7.1/lib" />
             </list>
           </value>
         </entry>
@@ -251,6 +298,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
             </list>
           </value>
         </entry>
@@ -258,6 +306,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lints-4.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/lints-4.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -265,6 +314,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.2.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/logging-1.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -272,6 +322,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lyell-1.1.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/lyell-1.3.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lyell-1.3.2/lib" />
             </list>
           </value>
         </entry>
@@ -279,6 +331,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lyell_gen-1.3.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/lyell_gen-3.0.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lyell_gen-3.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -286,6 +340,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macros-0.1.2-main.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macros-0.1.0-main.5/lib" />
             </list>
           </value>
         </entry>
@@ -293,6 +348,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
             </list>
           </value>
         </entry>
@@ -300,6 +356,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.15.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/meta-1.15.0/lib" />
             </list>
           </value>
         </entry>
@@ -307,6 +364,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/mime-1.0.5/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/mime-1.0.5/lib" />
             </list>
           </value>
         </entry>
@@ -314,6 +372,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/mutex-3.1.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/mutex-3.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -321,6 +380,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/node_preamble-2.0.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/node_preamble-2.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -328,6 +388,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/package_config-2.1.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/package_config-2.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -335,6 +396,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.9.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/path-1.9.0/lib" />
             </list>
           </value>
         </entry>
@@ -342,6 +404,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pool-1.5.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/pool-1.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -349,6 +412,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pub_semver-2.1.4/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/pub_semver-2.1.4/lib" />
             </list>
           </value>
         </entry>
@@ -356,6 +420,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pubspec_parse-1.3.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/pubspec_parse-1.3.0/lib" />
             </list>
           </value>
         </entry>
@@ -363,6 +428,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf-1.4.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.2/lib" />
             </list>
           </value>
         </entry>
@@ -370,6 +437,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_openrouter-0.0.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_openrouter-0.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -377,6 +445,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_packages_handler-3.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -384,6 +453,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_router-1.1.4/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_router-1.1.4/lib" />
             </list>
           </value>
         </entry>
@@ -391,6 +461,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_static-1.1.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_static-1.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -398,6 +469,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_web_socket-2.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_web_socket-2.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -405,6 +477,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_gen-1.5.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_gen-2.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_gen-2.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -412,6 +486,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_map_stack_trace-2.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -419,6 +494,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_maps-0.10.12/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_maps-0.10.12/lib" />
             </list>
           </value>
         </entry>
@@ -426,6 +502,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.10.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_span-1.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -433,6 +510,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sprintf-7.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/sprintf-7.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -440,6 +518,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
             </list>
           </value>
         </entry>
@@ -447,6 +526,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -454,6 +534,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -461,6 +542,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -468,30 +550,37 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="test">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.7/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.5/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.7/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/test-1.25.15/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.15/lib" />
             </list>
           </value>
         </entry>
         <entry key="test_api">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.2/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/test_api-0.7.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.4/lib" />
             </list>
           </value>
         </entry>
         <entry key="test_core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.4/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.4/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/test_core-0.6.8/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.8/lib" />
             </list>
           </value>
         </entry>
@@ -499,6 +588,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/timing-1.0.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/timing-1.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -506,6 +596,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/typed_data-1.3.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/typed_data-1.3.2/lib" />
             </list>
           </value>
         </entry>
@@ -513,6 +604,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-4.4.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/uuid-4.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -520,7 +612,9 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-14.2.3/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/vm_service-14.2.2/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-14.2.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-14.2.4/lib" />
             </list>
           </value>
         </entry>
@@ -528,6 +622,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/watcher-1.1.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/watcher-1.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -535,6 +630,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.5.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/web-0.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -542,6 +638,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket-0.1.5/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/web_socket-0.1.4/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket-0.1.4/lib" />
             </list>
           </value>
@@ -550,6 +647,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket_channel-3.0.0/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/web_socket_channel-3.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -557,6 +655,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webkit_inspection_protocol-1.2.1/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/webkit_inspection_protocol-1.2.1/lib" />
             </list>
           </value>
         </entry>
@@ -564,34 +663,46 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.2/lib" />
+              <option value="$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/yaml-3.1.2/lib" />
             </list>
           </value>
         </entry>
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-68.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-70.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-80.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-6.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-6.5.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-7.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/args-2.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build-2.4.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build-2.4.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_config-1.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_daemon-4.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_resolvers-2.4.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_resolvers-2.4.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner-2.4.11/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner-2.4.14/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-7.3.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/build_runner_core-8.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/built_collection-5.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/built_value-8.9.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/code_builder-4.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.18.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.19.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.19.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/conduit_codable-4.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/conduit_open_api-4.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/convert-3.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/coverage-1.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.6/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-3.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/duffer-2.3.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file-7.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fixnum-1.1.0/lib" />
@@ -602,13 +713,17 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_methods-1.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/io-1.0.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.7.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lints-4.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lyell-1.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lyell-1.3.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lyell_gen-1.3.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lyell_gen-3.0.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macros-0.1.0-main.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macros-0.1.2-main.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.15.0/lib" />
@@ -621,12 +736,14 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pub_semver-2.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pubspec_parse-1.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_openrouter-0.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_router-1.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_static-1.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_web_socket-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_gen-1.5.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_gen-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_maps-0.10.12/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.10.0/lib" />
@@ -636,17 +753,21 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.25.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.7.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.6.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/timing-1.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/typed_data-1.3.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-4.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-14.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-14.2.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-14.2.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/watcher-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.5.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket-0.1.4/lib" />
@@ -654,6 +775,85 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket_channel-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webkit_inspection_protocol-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/_fe_analyzer_shared-80.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/analyzer-7.3.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/args-2.5.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/async-2.11.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build-2.4.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_config-1.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_daemon-4.0.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_resolvers-2.4.4/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_runner-2.4.14/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/build_runner_core-8.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/built_collection-5.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/built_value-8.9.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/code_builder-4.10.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/collection-1.19.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/conduit_codable-4.4.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/conduit_open_api-4.4.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/convert-3.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/coverage-1.8.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/crypto-3.0.3/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/dart_style-3.0.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/duffer-2.3.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/file-7.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/fixnum-1.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/frontend_server_client-4.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/glob-2.1.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/graphs-2.3.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http-1.2.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http_methods-1.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/io-1.0.4/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/js-0.7.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/lints-4.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/logging-1.2.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/lyell-1.3.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/lyell_gen-3.0.3/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/meta-1.15.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/mime-1.0.5/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/mutex-3.1.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/node_preamble-2.0.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/package_config-2.1.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/path-1.9.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/pool-1.5.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/pub_semver-2.1.4/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/pubspec_parse-1.3.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf-1.4.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_openrouter-0.0.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_packages_handler-3.0.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_router-1.1.4/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_static-1.1.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/shelf_web_socket-2.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_gen-2.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_map_stack_trace-2.1.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_maps-0.10.12/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/source_span-1.10.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/sprintf-7.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/test-1.25.15/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/test_api-0.7.4/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/test_core-0.6.8/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/timing-1.0.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/typed_data-1.3.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/uuid-4.5.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/vm_service-14.2.2/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/watcher-1.1.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/web-0.5.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/web_socket-0.1.4/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/web_socket_channel-3.0.0/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/webkit_inspection_protocol-1.2.1/lib" />
+      <root url="file://$USER_HOME$/.puro/shared/pub_cache/hosted/pub.dev/yaml-3.1.2/lib" />
+      <root url="file://$USER_HOME$/snap/flutter/common/flutter/bin/cache/dart-sdk/pkg/_macros/lib" />
       <root url="file:///usr/lib/dart/pkg/_macros/lib" />
     </CLASSES>
     <JAVADOC />

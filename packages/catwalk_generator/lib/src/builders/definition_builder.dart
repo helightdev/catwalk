@@ -11,7 +11,7 @@ import 'package:catwalk/catwalk.dart';
 
 import '../catwalk_generator_base.dart';
 
-class DefinitionBuilder extends SimpleAdapter<EndpointPolyfill> {
+class DefinitionBuilder extends SimpleAdapter<CatwalkEndpoint> {
   DefinitionBuilder() : super(archetype: "endpoint");
 
   @override
@@ -43,35 +43,68 @@ class DefinitionBuilder extends SimpleAdapter<EndpointPolyfill> {
         print("Not class element $classElement");
         continue;
       }
-      var retainedAnnotationChecker = TypeChecker.fromRuntime(RetainedAnnotation);
+      var retainedAnnotationChecker =
+          TypeChecker.fromRuntime(RetainedAnnotation);
 
       List<String> routes = [];
+      List<String> proxyMethods = [];
+      var index = 0;
       for (var element in classElement.methods) {
         var parameters = element.parameters
             .map((e) =>
-        "gen.MethodArgument(${getTypeTree(e.type).code(codeContext.cachedCounter)}, ${e.type.nullabilitySuffix != NullabilitySuffix.none},'${sqsLiteralEscape(e.name)}', [${e.metadata.whereTypeChecker(retainedAnnotationChecker).map((e) => codeContext.annotationSource(e)).join(",")}])")
+                "gen.MethodArgument(${getTypeTree(e.type).code(codeContext.cachedCounter)}, ${e.type.nullabilitySuffix != NullabilitySuffix.none},'${sqsLiteralEscape(e.name)}', [${e.metadata.whereTypeChecker(retainedAnnotationChecker).map((e) => codeContext.annotationSource(e)).join(",")}])")
             .toList();
 
         var futureTypeChecker = TypeChecker.fromRuntime(Future);
         var futureOrTypeChecker = TypeChecker.fromUrl("dart:async#FutureOr");
-        if (!futureTypeChecker.isAssignableFromType(element.returnType) && !futureOrTypeChecker.isAssignableFromType(element.returnType)) {
+        if (!futureTypeChecker.isAssignableFromType(element.returnType) &&
+            !futureOrTypeChecker.isAssignableFromType(element.returnType)) {
           throw "Return type must be a Future";
         }
 
         var returnType = (element.returnType as InterfaceType).typeArguments[0];
+        var isVoidOrDynamic =
+            returnType is VoidType || returnType is DynamicType;
 
-        var body = "gen.RouteDefinition<${codeContext.className(classElement)}>("
+        var body =
+            "gen.RouteDefinition<${codeContext.className(classElement)}>("
             "[${element.metadata.whereTypeChecker(retainedAnnotationChecker).map((e) => codeContext.annotationSource(e)).join(",")}],"
             "${getTypeTree(returnType).code(codeContext.cachedCounter)},"
-            "${returnType.nullabilitySuffix == NullabilitySuffix.question},"
+            "${returnType.nullabilitySuffix == NullabilitySuffix.question || isVoidOrDynamic},"
             "[${parameters.join(",")}],"
             "(obj,args) => obj.${element.name}(${List.generate(parameters.length, (index) => "args[$index]").join(",")}),"
             "'${sqsLiteralEscape(element.name)}',"
             ")";
 
+        var proxyMethod =
+            "@override\nFuture<${codeContext.typeName(returnType)}${returnType.nullabilitySuffix == NullabilitySuffix.question ? "?" : ""}> ${element.name}(${element.parameters.map((e) => "${codeContext.typeName(e.type)} ${e.name}").join(",")}) async {\n"
+            "  return await runner.run($index, [${element.parameters.map((e) => e.name).join(",")}]);\n"
+            "}\n";
+
         routes.add(body);
+        proxyMethods.add(proxyMethod);
+        index++;
       }
-      codeContext.codeBuffer.writeln("final List<gen.RouteDefinition<${codeContext.className(classElement)}>> ${classElement.name}_routes = [${routes.join(",")}];");
+      codeContext.codeBuffer.writeln(
+          "final List<gen.RouteDefinition<${codeContext.className(classElement)}>> ${classElement.name}_routes = [${routes.join(",")}];");
+
+      var clientProxyMethods = classElement.methods
+          .where((element) => element.returnType.isDartAsyncFuture)
+          .toList();
+
+      // Create client runner implementation
+      codeContext.codeBuffer.writeln("""
+class ${classElement.name}Client implements ${codeContext.className(classElement)} {
+
+  final gen.CatwalkProtocol protocol;
+ 
+  ${classElement.name}Client(this.protocol);
+
+  late final gen.ClientRunner runner = protocol.createClientRunner(${classElement.name}_routes);
+
+  ${proxyMethods.join("\n")}
+}
+""");
     }
   }
 }
